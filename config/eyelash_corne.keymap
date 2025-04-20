@@ -74,6 +74,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "1";
         };
     };
 };
