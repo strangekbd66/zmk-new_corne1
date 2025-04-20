@@ -74,5 +74,16 @@
 
             sensor-bindings = <&scroll_encoder>;
         };
+
+        colemak {
+            bindings = <
+&kp TAB                       &kp Q  &kp W  &kp F             &kp P         &kp G                                          &kp SCROLLLOCK             &kp J                  &kp L            &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC                       &kp A  &kp R  &kp S             &kp T         &kp D                               &mkp LCLK  &caps_word      &mkp RCLK  &kp H                  &kp N            &kp E          &kp I    &kp O     &kp APOS
+&mt LA(LC(LEFT_SHIFT)) GRAVE  &kp Z  &kp X  &kp C             &kp V         &kp B                 &kp K_MUTE               &mkp MCLK                  &kp K                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_GUI BACKSLASH
+                                            &kp LEFT_CONTROL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                      &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
     };
 };
