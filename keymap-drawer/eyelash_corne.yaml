@@ -1,61 +1,61 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  colemak:
+  '0':
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - F
-  - P
-  - G
-  - SCROLLLOCK
-  - J
-  - L
-  - U
+  - E
+  - R
+  - T
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Y
-  - {t: ;, s: ':'}
+  - U
+  - I
+  - O
+  - P
   - {t: '-', s: _}
   - $$mdi:keyboard-esc$$
   - A
-  - R
   - S
-  - T
   - D
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:alpha-w-box$$
+  - F
+  - G
   - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:mouse-scroll-wheel$$
   - H
-  - N
-  - E
-  - I
-  - O
-  - .
-  - {t: '`', h: 'Alt+Ctl+$$mdi:apple-keyboard-shift$$', s: '~'}
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - {t: '`', s: '~'}
   - Z
   - X
   - C
   - V
   - B
-  - MUTE
-  - $$mdi:mouse-scroll-wheel$$
-  - K
+  - $$mdi:alpha-w-box$$
+  - $$mdi:mouse-left-click-outline$$
+  - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: \, h: RIGHT GUI, s: '|'}
+  - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: colemak}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: L1}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:backspace$$', h: colemak}
+  - {t: '$$mdi:backspace$$', h: L1}
   - $$mdi:apple-keyboard-option$$
   L1:
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP NLCK
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-left-click-outline$$
-  - SCROLLLOCK
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
@@ -93,57 +93,8 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  '0':
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - SCROLLLOCK
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '-', s: _}
-  - $$mdi:keyboard-esc$$
-  - A
-  - S
-  - D
-  - F
-  - G
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:alpha-w-box$$
-  - $$mdi:mouse-right-click-outline$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - {t: '`', s: '~'}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - MUTE
-  - $$mdi:mouse-scroll-wheel$$
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: colemak}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:backspace$$', h: colemak}
-  - $$mdi:apple-keyboard-option$$
