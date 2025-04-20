@@ -51,7 +51,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   L1:
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP NUMLOCK
+  - KP NLCK
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-left-click-outline$$
