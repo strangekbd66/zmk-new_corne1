@@ -56,8 +56,8 @@
         L0 {
             display-name = "0";
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E      &kp R         &kp T                                          &none                 &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp MINUS
-&kp ESCAPE  &kp A  &kp S  &kp D      &kp F         &kp G                               &mkp RCLK  &none      &mkp MCLK  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
+&kp TAB     &kp Q  &kp W  &kp E      &kp R         &kp T                                          &tb_tg_scroll                 &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp MINUS
+&kp ESCAPE  &kp A  &kp S  &kp D      &kp F         &kp G                               &mkp RCLK  &tb_cyc_dpi      &mkp MCLK  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
 &kp GRAVE   &kp Z  &kp X  &kp C      &kp V         &kp B                 &caps_word               &mkp LCLK             &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSLASH
                           &kp LCTRL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                 &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
             >;
@@ -67,8 +67,8 @@
 
         L1 {
             bindings = <
-&trans  &none      &mkp RCLK  &mkp MCLK     &mkp LCLK  &none                                &rgb_ug RGB_TOG              &trans  &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
-&trans  &kp LC(A)  &kp LC(C)  &kp UP_ARROW  &kp LC(V)  &kp LC(LS(V))            &bt BT_PRV  &trans           &bt BT_NXT  &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
+&trans  &tb_cyc_dpi      &mkp RCLK  &mkp MCLK     &mkp LCLK  &tbs_mt 0 0                                &rgb_ug RGB_TOG              &trans  &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
+&trans  &kp LC(A)  &kp LC(C)  &kp UP_ARROW  &kp LC(V)  &kp LC(LS(V))            &bt BT_PRV  &tb_bootloader           &bt BT_NXT  &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
 &trans  &kp LC(Z)  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(X)      &trans                &bt BT_CLR                   &trans  &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
                               &trans        &trans     &trans                                                            &trans  &trans  &trans
             >;
