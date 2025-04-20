@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&tb_tg_scroll'
   - Y
   - U
   - I
@@ -21,7 +21,7 @@ layers:
   - F
   - G
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&tb_cyc_dpi'
   - $$mdi:mouse-scroll-wheel$$
   - H
   - J
@@ -51,11 +51,11 @@ layers:
   - $$mdi:apple-keyboard-option$$
   '1':
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&tb_cyc_dpi'
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&tbs_mt 0 0'
   - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
@@ -70,7 +70,7 @@ layers:
   - Ctl+V
   - Ctl+Sft+V
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&tb_bootloader'
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '4', s: $}
