@@ -67,10 +67,10 @@
 
         L1 {
             bindings = <
-&trans  &kp KP_NUMLOCK  &mkp RCLK  &mkp MCLK     &mkp LCLK  &kp SCROLLLOCK                        &rgb_ug RGB_TOG              &trans  &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
-&trans  &kp LC(A)       &kp LC(C)  &kp UP_ARROW  &kp LC(V)  &kp LC(LS(V))             &bt BT_PRV  &trans           &bt BT_NXT  &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
-&trans  &kp LC(Z)       &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(X)       &trans                &bt BT_CLR                   &trans  &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
-                                   &trans        &trans     &trans                                                             &trans  &trans  &trans
+&trans  &kp KP_NLCK  &mkp RCLK  &mkp MCLK     &mkp LCLK  &kp SCROLLLOCK                        &rgb_ug RGB_TOG              &trans  &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
+&trans  &kp LC(A)    &kp LC(C)  &kp UP_ARROW  &kp LC(V)  &kp LC(LS(V))             &bt BT_PRV  &trans           &bt BT_NXT  &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
+&trans  &kp LC(Z)    &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(X)       &trans                &bt BT_CLR                   &trans  &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
+                                &trans        &trans     &trans                                                             &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
