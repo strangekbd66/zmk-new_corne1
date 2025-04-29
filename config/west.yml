@@ -6,8 +6,15 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
+    # Support for Eylash Corne
+    - name: a741725193
+      url-base: https://github.com/a741725193/zmk-new_corne
+    # support for Ploopy Nano Trackball
     - name: englmaxi
       url-base: https://github.com/englmaxi
+      # Support for Custom Nice!View and OLED Displays
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
@@ -16,8 +23,13 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # support for Ploopy Nano Trackball
     - name: zmk-hid-trackball-interface
       remote: englmaxi
+      revision: main
+    # Support for Custom Nice!View and OLED Displays
+    - name: zmk-nice-oled
+      remote: mctechnology17
       revision: main
   self:
     path: config
