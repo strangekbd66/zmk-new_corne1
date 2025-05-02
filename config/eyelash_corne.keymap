@@ -3,12 +3,12 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <interfaces/hid-trackball.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <interfaces/hid-trackball.dtsi>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -56,10 +56,10 @@
         L0 {
             display-name = "0";
             bindings = <
-&kp TAB                       &kp Q  &kp W  &kp E      &kp R         &kp T                                          &tb_tg_scroll             &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp MINUS
-&kp ESCAPE                    &kp A  &kp S  &kp D      &kp F         &kp G                               &mkp RCLK  &tb_cyc_dpi    &mkp MCLK  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
-&mt LA(LC(LEFT_SHIFT)) GRAVE  &kp Z  &kp X  &kp C      &kp V         &kp B                 &caps_word               &mkp LCLK                 &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_GUI BACKSLASH
-                                            &kp LCTRL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                     &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
+&kp TAB                       &kp Q  &kp W  &kp E      &kp R         &kp T                                         &kp UP                  &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp MINUS
+&kp ESCAPE                    &kp A  &kp S  &kp D      &kp F         &kp G                               &kp LEFT  &tb_cyc_dpi  &kp RIGHT  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
+&mt LA(LC(LEFT_SHIFT)) GRAVE  &kp Z  &kp X  &kp C      &kp V         &kp B                 &caps_word              &kp DOWN                &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_GUI BACKSLASH
+                                            &kp LCTRL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                  &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -67,10 +67,10 @@
 
         L1 {
             bindings = <
-&trans  &tb_cyc_dpi  &mkp RCLK  &mkp MCLK     &mkp LCLK  &tb_mo_scroll                        &rgb_ug RGB_TOG              &kp PLUS      &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
-&trans  &kp LC(A)    &kp LC(C)  &kp UP_ARROW  &kp LC(V)  &kp LC(LS(V))            &bt BT_PRV  &tb_bootloader   &bt BT_NXT  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
-&trans  &kp LC(Z)    &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(X)      &trans                &bt BT_CLR                   &kp PERIOD    &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
-                                &trans        &trans     &trans                                                            &trans        &trans  &trans
+&trans  &tb_cyc_dpi  &mkp RCLK     &mkp MCLK         &mkp LCLK      &tb_mo_scroll                        &rgb_ug RGB_TOG              &kp PLUS      &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
+&trans  &kp LC(A)    &kp LC(C)     &kp LC(UP_ARROW)  &kp LC(V)      &kp LC(LS(V))            &bt BT_PRV  &tb_bootloader   &bt BT_NXT  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
+&trans  &kp LC(Z)    &kp LC(LEFT)  &kp LC(DOWN)      &kp LC(RIGHT)  &kp LC(X)      &trans                &bt BT_CLR                   &kp PERIOD    &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
+                                   &trans            &trans         &trans                                                            &trans        &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
