@@ -105,7 +105,7 @@ layers:
   - F
   - P
   - B
-  - '&tb_tg_scroll'
+  - $$mdi:arrow-up-bold$$
   - J
   - L
   - U
@@ -118,9 +118,9 @@ layers:
   - S
   - T
   - G
-  - $$mdi:mouse-right-click-outline$$
-  - '&tb_cyc_dpi'
-  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:arrow-left-bold$$
+  - '&tb_tg_scroll'
+  - $$mdi:arrow-right-bold$$
   - M
   - N
   - E
@@ -134,7 +134,7 @@ layers:
   - D
   - V
   - $$mdi:alpha-w-box$$
-  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:arrow-down-bold$$
   - K
   - H
   - {t: ',', s: <}
