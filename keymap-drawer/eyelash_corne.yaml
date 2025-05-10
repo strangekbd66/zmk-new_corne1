@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '`', h: 'Alt+Ctl+$$mdi:apple-keyboard-shift$$', s: '~'}
+  - {t: '`', h: '$$mdi:apple-keyboard-command$$', s: '~'}
   - Z
   - X
   - C
@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: \, h: RIGHT GUI, s: '|'}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '1'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
