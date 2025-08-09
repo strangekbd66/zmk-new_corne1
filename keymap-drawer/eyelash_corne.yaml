@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:alpha-w-box$$
+  - Gui+L
   - $$mdi:arrow-down-bold$$
   - N
   - M
@@ -43,19 +43,19 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - '&td0'
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '1'}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&td1'
+  - {t: '$$mdi:backspace$$', h: num_left}
+  - {t: '$$mdi:keyboard-space$$', h: '1'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace$$', h: '1'}
   - $$mdi:apple-keyboard-option$$
   '1':
   - {t: '$$mdi:transfer$$', type: trans}
   - '&tb_cyc_dpi'
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-left-click-outline$$
-  - '&tb_mo_scroll'
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - P
   - RGB TOG
   - +
   - {t: '7', s: '&'}
@@ -65,10 +65,10 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+A
-  - Ctl+C
-  - Ctl+$$mdi:arrow-up-bold$$
-  - Ctl+V
-  - Ctl+Sft+V
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - O
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - '&tb_bootloader'
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
@@ -80,10 +80,10 @@ layers:
   - {t: '[', s: '{'}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
-  - Ctl+$$mdi:arrow-left-bold$$
-  - Ctl+$$mdi:arrow-down-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
-  - Ctl+X
+  - $$mdi:pan-left$$
+  - $$mdi:pan-right$$
+  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - .
@@ -93,56 +93,56 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  Colemak mod-DH:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - F
-  - P
-  - B
+  num_left:
+  - ':'
+  - '*'
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - +
   - $$mdi:arrow-up-bold$$
-  - J
-  - L
-  - U
-  - Y
-  - {t: ;, s: ':'}
-  - {t: '-', s: _}
+  - BT CLR ALL
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - RGB TOG
+  - RGB EFR
+  - RGB EFF
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - $$mdi:keyboard-esc$$
-  - A
-  - R
-  - S
-  - T
-  - G
+  - {t: /, s: '?'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '-', s: _}
   - $$mdi:arrow-left-bold$$
   - '&tb_tg_scroll'
   - $$mdi:arrow-right-bold$$
-  - M
-  - N
-  - E
-  - I
-  - O
+  - RGB BRI
+  - RGB SPI
+  - RGB SAI
+  - RGB HUI
+  - RGB COLOR HSB(0,88,50)
   - {t: '''', s: '"'}
   - {t: '`', h: 'Alt+Ctl+$$mdi:apple-keyboard-shift$$', s: '~'}
-  - Z
-  - X
-  - C
-  - D
-  - V
+  - {t: '=', s: +}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '0', s: )}
   - $$mdi:alpha-w-box$$
   - $$mdi:arrow-down-bold$$
-  - K
-  - H
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - RGB BRD
+  - RGB SPD
+  - RGB SAD
+  - RGB HUD
   - {t: /, s: '?'}
   - {t: \, h: RIGHT GUI, s: '|'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '1'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '1', type: held}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace$$', h: '1'}
@@ -150,3 +150,7 @@ layers:
 combos:
 - p: [0, 1]
   k: $$mdi:keyboard-esc$$
+- p: [29, 30]
+  k: Ctl+Y
+- p: [42, 43]
+  k: '&td2'
