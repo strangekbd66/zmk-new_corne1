@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  '0':
+  default_layer:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -13,8 +13,8 @@ layers:
   - I
   - O
   - P
-  - {t: '-', s: _}
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
   - A
   - S
   - D
@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '`', h: '$$mdi:apple-keyboard-command$$', s: '~'}
+  - {t: 'Alt+$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - Z
   - X
   - C
@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: \, h: RIGHT GUI, s: '|'}
+  - $$mdi:apple-keyboard-shift$$
   - '&td0'
   - {t: '$$mdi:backspace-reverse-outline$$', h: '1'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -147,3 +147,6 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace$$', h: '1'}
   - $$mdi:apple-keyboard-option$$
+combos:
+- p: [0, 1]
+  k: $$mdi:keyboard-esc$$
