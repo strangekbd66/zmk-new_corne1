@@ -3,14 +3,13 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-
+#include <interfaces/hid-trackball.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <interfaces/hid-trackball.dtsi>
-
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -38,6 +37,24 @@
 
             label = "LCTRL - CAPSWORD";
         };
+
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp ENTER>, <&kp LC(LS(ENTER))>;
+
+            label = "alt-enter-ctrlshenter";
+        };
+
+        td2: td2 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI>, <&kp LG(C)>;
+
+            label = "gui-copilot";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -61,6 +78,16 @@
             bindings = <&kp ESC>;
             key-positions = <0 1>;
         };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <29 30>;
+        };
+
+        gui-copilot {
+            bindings = <&td2>;
+            key-positions = <42 43>;
+        };
     };
 
     keymap {
@@ -69,38 +96,38 @@
         default_layer {
             display-name = "default_layer";
             bindings = <
-&kp TAB                   &kp Q  &kp W  &kp E  &kp R         &kp T                                         &kp UP                    &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp BACKSPACE
-&mt LSHFT CAPS            &kp A  &kp S  &kp D  &kp F         &kp G                               &kp LEFT  &tb_tg_scroll  &kp RIGHT  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
-&mt LEFT_CONTROL LA(TAB)  &kp Z  &kp X  &kp C  &kp V         &kp B                 &caps_word              &kp DOWN                  &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                        &td0   &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                    &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
+&kp TAB                   &kp Q  &kp W  &kp E  &kp R            &kp T                               &kp UP                    &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp BACKSPACE
+&mt LSHFT CAPS            &kp A  &kp S  &kp D  &kp F            &kp G                     &kp LEFT  &tb_tg_scroll  &kp RIGHT  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
+&mt LEFT_CONTROL LA(TAB)  &kp Z  &kp X  &kp C  &kp V            &kp B        &kp LG(L)              &kp DOWN                  &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                        &td1   &lt 2 BACKSPACE  &lt 1 SPACE                                                   &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        L1 {
+        NAV {
             bindings = <
-&trans  &tb_cyc_dpi  &mkp RCLK     &mkp MCLK         &mkp LCLK      &tb_mo_scroll                        &rgb_ug RGB_TOG              &kp PLUS      &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
-&trans  &kp LC(A)    &kp LC(C)     &kp LC(UP_ARROW)  &kp LC(V)      &kp LC(LS(V))            &bt BT_PRV  &tb_bootloader   &bt BT_NXT  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
-&trans  &kp LC(Z)    &kp LC(LEFT)  &kp LC(DOWN)      &kp LC(RIGHT)  &kp LC(X)      &trans                &bt BT_CLR                   &kp PERIOD    &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
-                                   &trans            &trans         &trans                                                            &trans        &trans  &trans
+&trans  &tb_cyc_dpi  &kp HOME        &kp UP_ARROW     &kp END         &kp P                               &rgb_ug RGB_TOG              &kp PLUS      &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS
+&trans  &kp LC(A)    &kp LEFT        &kp DOWN         &kp RIGHT       &kp O                   &bt BT_PRV  &tb_bootloader   &bt BT_NXT  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT
+&trans  &kp LC(Z)    &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP  &trans                &bt BT_CLR                   &kp PERIOD    &kp N1  &kp N2  &kp N3  &kp FSLH   &kp RBKT
+                                     &trans           &trans          &trans                                                           &trans        &trans  &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
             label = "1";
         };
 
-        layer_2 {
-            display-name = "0";
+        num_left {
+            display-name = "num_left";
             bindings = <
-&kp TAB                       &kp Q  &kp W  &kp F      &kp P         &kp B                                         &kp UP                    &kp J                  &kp L            &kp U          &kp Y    &kp SEMI  &kp MINUS
-&kp ESCAPE                    &kp A  &kp R  &kp S      &kp T         &kp G                               &kp LEFT  &tb_tg_scroll  &kp RIGHT  &kp M                  &kp N            &kp E          &kp I    &kp O     &kp SQT
-&mt LA(LC(LEFT_SHIFT)) GRAVE  &kp Z  &kp X  &kp C      &kp D         &kp V                 &caps_word              &kp DOWN                  &kp K                  &kp H            &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_GUI BACKSLASH
-                                            &kp LCTRL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                    &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
+&kp COLON                     &kp ASTERISK  &kp N7  &kp N8     &kp N9        &kp PLUS                                      &kp UP                    &bt BT_CLR_ALL         &bt BT_NXT       &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF                 &out OUT_TOG
+&kp ESCAPE                    &kp SLASH     &kp N4  &kp N5     &kp N6        &kp MINUS                           &kp LEFT  &tb_tg_scroll  &kp RIGHT  &rgb_ug RGB_BRI        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_COLOR_HSB(0,88,50)  &kp SQT
+&mt LA(LC(LEFT_SHIFT)) GRAVE  &kp EQUAL     &kp N1  &kp N2     &kp N3        &kp N0                &caps_word              &kp DOWN                  &rgb_ug RGB_BRD        &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &kp FSLH                        &mt RIGHT_GUI BACKSLASH
+                                                    &kp LCTRL  &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                    &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            label = "Colemak mod-DH";
+            label = "num_left";
         };
     };
 };
