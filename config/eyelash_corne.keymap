@@ -3,13 +3,12 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-
+#include <interfaces/hid-trackball.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <interfaces/hid-trackball.dtsi>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -53,19 +52,28 @@
         tap-ms = <100>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        L0 {
-            display-name = "0";
+        default_layer {
+            display-name = "default_layer";
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E  &kp R         &kp T                                         &kp UP                    &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp MINUS
-&kp ESCAPE          &kp A  &kp S  &kp D  &kp F         &kp G                               &kp LEFT  &tb_tg_scroll  &kp RIGHT  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
-&mt LEFT_GUI GRAVE  &kp Z  &kp X  &kp C  &kp V         &kp B                 &caps_word              &kp DOWN                  &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_GUI BACKSLASH
-                                  &td0   &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                    &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
+&kp TAB                   &kp Q  &kp W  &kp E  &kp R         &kp T                                         &kp UP                    &kp Y                  &kp U            &kp I          &kp O    &kp P     &kp BACKSPACE
+&mt LSHFT CAPS            &kp A  &kp S  &kp D  &kp F         &kp G                               &kp LEFT  &tb_tg_scroll  &kp RIGHT  &kp H                  &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
+&mt LEFT_CONTROL LA(TAB)  &kp Z  &kp X  &kp C  &kp V         &kp B                 &caps_word              &kp DOWN                  &kp N                  &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                        &td0   &lt 1 DELETE  &mt LEFT_SHIFT ENTER                                                    &mt RIGHT_SHIFT SPACE  &lt 1 BACKSPACE  &kp RIGHT_ALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         L1 {
