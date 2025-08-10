@@ -221,3 +221,5 @@ combos:
   k: Gui+$$mdi:arrow-right-bold$$
 - p: [17, 14]
   k: Gui+Sft+S
+- p: [17, 13]
+  k: Gui+N
