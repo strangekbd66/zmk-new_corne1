@@ -3,15 +3,13 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-
+#include <interfaces/hid-trackball.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <interfaces/hid-trackball.dtsi>
-
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -139,6 +137,15 @@
         notifications {
             bindings = <&kp LG(N)>;
             key-positions = <17 13>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(F) &kp O &kp R &kp SPACE &kp LS(R) &kp LS(O) &kp SPACE &kp I &kp S &kp S &kp U &kp A &kp N &kp C &kp E &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp COMMA &kp SPACE &kp K &kp I &kp N &kp D &kp L &kp Y &kp SPACE &kp R &kp E &kp F &kp E &kp R &kp SPACE &kp T &kp O &kp SPACE &kp T &kp H &kp E &kp SPACE &kp L &kp I &kp S &kp T &kp SPACE &kp O &kp F &kp SPACE &kp R &kp E &kp Q &kp U &kp I &kp R &kp E &kp D &kp SPACE &kp M &kp A &kp T &kp E &kp R &kp I &kp A &kp L &kp S &kp SPACE &kp P &kp R &kp O &kp V &kp I &kp D &kp E &kp D &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
+            label = "NEW_MACRO";
         };
     };
 
