@@ -203,6 +203,13 @@
             bindings = <&none &kp LS(A) &kp C &kp K &kp N &kp O &kp W &kp L &kp E &kp D &kp G &kp E &kp D &kp SPACE &kp O &kp N &kp SPACE &kp T &kp H &kp I &kp S &kp COMMA &kp SPACE &kp LS(P) &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp S &kp E &kp E &kp SPACE &kp A &kp T &kp T &kp A &kp C &kp H &kp E &kp D &kp SPACE &kp F &kp I &kp L &kp E &kp SPACE &kp F &kp O &kp R &kp SPACE &kp P &kp R &kp O &kp C &kp E &kp S &kp S &kp I &kp N &kp G &kp SPACE &kp O &kp F &kp SPACE &kp W &kp O &kp R &kp K &kp SPACE &kp P &kp E &kp R &kp M &kp I &kp T &kp DOT>;
             label = "Forpermit";
         };
+
+        new_macro9: new_macro9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(P) &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp S &kp E &kp E &kp SPACE &kp O &kp F &kp F &kp S &kp E &kp T &kp SPACE &kp C &kp O &kp N &kp S &kp O &kp L &kp I &kp D &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
+            label = "Offset";
+        };
     };
 
     keymap {
