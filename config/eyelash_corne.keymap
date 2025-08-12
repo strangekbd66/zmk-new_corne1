@@ -238,6 +238,20 @@
             bindings = <&none &kp LC(F) &kp R &kp E &kp F &kp ENTER>;
             label = "NEW_MACRO13";
         };
+
+        new_macro14: new_macro14 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp P &kp E &kp C &kp I &kp A &kp L>;
+            label = "Special";
+        };
+
+        new_macro15: new_macro15 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(F) &kp O &kp R &kp SPACE &kp A &kp L &kp L &kp O &kp C &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp O &kp F &kp SPACE &kp N &kp E &kp E &kp D &kp E &kp D &kp SPACE &kp M &kp A &kp T &kp E &kp R &kp I &kp A &kp L &kp S &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp DOT>;
+            label = "Matsallocation";
+        };
     };
 
     keymap {
