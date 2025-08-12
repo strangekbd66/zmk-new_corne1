@@ -189,6 +189,13 @@
             bindings = <&none &kp N1 &kp X &kp SPACE &kp LS(O) &kp LS(N) &kp LS(U) &kp SPACE &kp M &kp O &kp D &kp E &kp M &kp RET &kp N1 &kp X &kp SPACE &kp LS(T) &kp E &kp L &kp S &kp E &kp T &kp SPACE &kp RET &kp N1 &kp X &kp SPACE &kp LS(I) &kp LS(O) &kp LS(O) &kp RET &kp N1 &kp X &kp SPACE &kp P &kp A &kp T &kp C &kp H &kp SPACE &kp C &kp O &kp R &kp D &kp SPACE &kp RET &kp N4 &kp X &kp SPACE &kp LS(S) &kp LS(C) &kp SPACE &kp C &kp O &kp N &kp N &kp E &kp C &kp T &kp O &kp R>;
             label = "NEW_MACRO6";
         };
+
+        new_macro7: new_macro7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(M) &kp LS(O) &kp LS(A) &kp SPACE &kp LS(F) &kp LS(T) &kp LS(T) &kp LS(X) &kp RET &kp N1 &kp X &kp SPACE &kp LS(O) &kp LS(N) &kp LS(U) &kp SPACE &kp M &kp O &kp D &kp E &kp M &kp RET &kp N1 &kp X &kp SPACE &kp LS(T) &kp E &kp L &kp S &kp E &kp T &kp SPACE &kp RET &kp N1 &kp X &kp SPACE &kp LS(I) &kp LS(O) &kp LS(O) &kp RET &kp N1 &kp X &kp SPACE &kp LS(S) &kp LS(C) &kp MINUS &kp LS(S) &kp LS(C) &kp P &kp A &kp T &kp C &kp H &kp SPACE &kp C &kp O &kp R &kp D &kp SPACE &kp RET &kp N1 &kp X &kp SPACE &kp LS(L) &kp LS(C) &kp MINUS &kp LS(S) &kp LS(C) &kp P &kp A &kp T &kp C &kp H &kp SPACE &kp C &kp O &kp R &kp D &kp SPACE &kp RET &kp N3 &kp X &kp SPACE &kp LS(S) &kp LS(C) &kp SPACE &kp C &kp O &kp N &kp N &kp E &kp C &kp T &kp O &kp R>;
+            label = "MOAFTTXbundle";
+        };
     };
 
     keymap {
