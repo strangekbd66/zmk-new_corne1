@@ -210,6 +210,20 @@
             bindings = <&none &kp LS(P) &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp S &kp E &kp E &kp SPACE &kp O &kp F &kp F &kp S &kp E &kp T &kp SPACE &kp C &kp O &kp N &kp S &kp O &kp L &kp I &kp D &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
             label = "Offset";
         };
+
+        new_macro10: new_macro10 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(P) &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp S &kp E &kp E &kp SPACE &kp LS(O) &kp LS(T) &kp SPACE &kp C &kp O &kp N &kp S &kp O &kp L &kp I &kp D &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
+            label = "OT";
+        };
+
+        new_macro11: new_macro11 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp H &kp A &kp R &kp I &kp N &kp G &kp SPACE &kp R &kp E &kp M &kp A &kp R &kp K &kp S &kp SPACE &kp F &kp R &kp O &kp M &kp SPACE &kp LS(F) &kp LS(R) &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA &kp RET &kp RET &kp LS(A) &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LS(T) &kp A &kp K &kp E &kp N &kp COLON &kp SPACE &kp RET &kp RET &kp LS(A) &kp S &kp S &kp I &kp G &kp N &kp E &kp D &kp SPACE &kp LS(F) &kp LS(R) &kp COLON>;
+            label = "FRremarks";
+        };
     };
 
     keymap {
