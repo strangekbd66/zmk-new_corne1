@@ -147,6 +147,13 @@
             bindings = <&none &kp LS(F) &kp O &kp R &kp SPACE &kp LS(R) &kp LS(O) &kp SPACE &kp I &kp S &kp S &kp U &kp A &kp N &kp C &kp E &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp COMMA &kp SPACE &kp K &kp I &kp N &kp D &kp L &kp Y &kp SPACE &kp R &kp E &kp F &kp E &kp R &kp SPACE &kp T &kp O &kp SPACE &kp T &kp H &kp E &kp SPACE &kp L &kp I &kp S &kp T &kp SPACE &kp O &kp F &kp SPACE &kp R &kp E &kp Q &kp U &kp I &kp R &kp E &kp D &kp SPACE &kp M &kp A &kp T &kp E &kp R &kp I &kp A &kp L &kp S &kp SPACE &kp P &kp R &kp O &kp V &kp I &kp D &kp E &kp D &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
             label = "NEW_MACRO";
         };
+
+        new_macro1: new_macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp C &kp K &kp N &kp O &kp W &kp L &kp E &kp D &kp G &kp E &kp D &kp SPACE &kp O &kp N &kp SPACE &kp T &kp H &kp I &kp S &kp DOT &kp SPACE &kp LS(W) &kp E &kp SPACE &kp W &kp I &kp L &kp L &kp SPACE &kp L &kp I &kp N &kp E &kp SPACE &kp U &kp P &kp SPACE &kp D &kp I &kp S &kp P &kp A &kp T &kp C &kp H &kp SPACE &kp O &kp N &kp C &kp E &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp A &kp V &kp A &kp I &kp L &kp A &kp B &kp L &kp E &kp SPACE &kp LS(F) &kp LS(R) &kp DOT>;
+            label = "FRlineup";
+        };
     };
 
     keymap {
