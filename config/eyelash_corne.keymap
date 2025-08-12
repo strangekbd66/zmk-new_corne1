@@ -231,6 +231,13 @@
             bindings = <&none &kp LS(A) &kp C &kp K &kp N &kp O &kp W &kp L &kp E &kp D &kp G &kp E &kp D &kp SPACE &kp O &kp N &kp SPACE &kp T &kp H &kp I &kp S &kp DOT &kp SPACE &kp LS(K) &kp I &kp N &kp D &kp L &kp Y &kp SPACE &kp R &kp E &kp F &kp E &kp R &kp SPACE &kp T &kp O &kp SPACE &kp A &kp T &kp T &kp E &kp N &kp D &kp I &kp N &kp G &kp SPACE &kp LS(F) &kp LS(R) &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp COMMA>;
             label = "attendingFR";
         };
+
+        new_macro13: new_macro13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LC(F) &kp R &kp E &kp F &kp ENTER>;
+            label = "NEW_MACRO13";
+        };
     };
 
     keymap {
