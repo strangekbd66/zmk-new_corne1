@@ -272,3 +272,7 @@ combos:
   k: Gui+Sft+S
 - p: [17, 13]
   k: Gui+N
+- p: [17, 4]
+  k: Ctl+Q
+- p: [17, 2]
+  k: Alt+F4
